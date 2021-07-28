@@ -1,0 +1,122 @@
+{
+  "name": "Role removed",
+  "temp": "role01",
+  "event-type": "Member Role Removed MOD",
+  "_id": "oiwKV",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "role01",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "member",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "0",
+      "find": "816141056465698827",
+      "storage": "1",
+      "varName": "logchannel",
+      "name": "Find Channel"
+    },
+    {
+      "role": "3",
+      "varName": "role01",
+      "info": "2",
+      "storage": "1",
+      "varName2": "rolename",
+      "name": "Store Role Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memuser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "21",
+      "storage": "1",
+      "varName2": "memtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "userid",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "${tempVars(\"memtag\")}",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "roleembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "roleembed",
+      "message": "<@${tempVars(\"userid\")}> lost the `${tempVars(\"rolename\")}` role.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "roleembed",
+      "message": "ID: ${tempVars(\"userid\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "roleembed",
+      "channel": "5",
+      "varName2": "logchannel",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "temp2": "member"
+}
