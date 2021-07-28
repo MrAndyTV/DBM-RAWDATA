@@ -1,0 +1,113 @@
+{
+  "name": "memberJoinVoice",
+  "temp": "member",
+  "event-type": "0",
+  "_id": "lAHxQ",
+  "actions": [
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memid",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"memid\")}",
+      "storage": "1",
+      "varName": "memberreal",
+      "find2": "0",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Find Member"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "21",
+      "storage": "1",
+      "varName2": "memtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "info": "1",
+      "storage": "1",
+      "varName2": "channelid",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "info": "2",
+      "storage": "1",
+      "varName2": "channelname",
+      "name": "Store Channel Info"
+    },
+    {
+      "info": "0",
+      "find": "816141056465698827",
+      "storage": "1",
+      "varName": "logchannel",
+      "name": "Find Channel"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"memtag\")}",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "${tempVars(\"memberreal\")} has connected to the `${tempVars(\"channelname\")}` voice channel ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "ID: ${tempVars(\"memid\")} ",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "5",
+      "varName2": "logchannel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "temp2": "channel"
+}
