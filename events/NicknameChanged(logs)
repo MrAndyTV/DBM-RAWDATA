@@ -1,0 +1,97 @@
+{
+  "name": "Nickname Changed",
+  "temp": "nickname",
+  "event-type": "Member Nickname Changed MOD",
+  "_id": "QviNA",
+  "actions": [
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memid",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"memid\")}",
+      "storage": "1",
+      "varName": "realmember",
+      "find2": "0",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Find Member"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "21",
+      "storage": "1",
+      "varName2": "memtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "memurl",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "0",
+      "find": "816141056465698827",
+      "storage": "1",
+      "varName": "logchannel",
+      "name": "Find Channel"
+    },
+    {
+      "title": "${tempVars(\"memtag\")}",
+      "author": "",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "${tempVars(\"memurl\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"realmember\")} changed their username to\n\n`${tempVars(\"nickname\")}`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "ID: ${tempVars(\"memid\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "logchannel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "temp2": "member"
+}
