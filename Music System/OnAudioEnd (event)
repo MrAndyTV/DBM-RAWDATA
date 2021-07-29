@@ -1,0 +1,74 @@
+{
+  "name": "On Audio End",
+  "temp": "vc",
+  "event-type": "On Audio End",
+  "_id": "EMvaY",
+  "actions": [
+    {
+      "server": "0",
+      "info": "10",
+      "storage": "1",
+      "varName": "next",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "storage": "1",
+      "varName": "next",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "0",
+      "find": "${serverVars(\"channelid.music\")}",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "title": "",
+      "author": "Queue Ended",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "https://media.discordapp.net/attachments/806662219689099284/863898961588256768/logo.gif",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "I left ${tempVars(\"vc\")} due to the queue being empty!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "stop",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "lVNPy",
+  "actions": [
+    {
+      "name": "Leave Voice Channel"
+    },
+    {
+      "name": "Clear Queue"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} bye",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}

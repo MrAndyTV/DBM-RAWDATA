@@ -1,0 +1,161 @@
+{
+  "name": "play",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "VTzsr",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "3",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "para",
+      "name": "Store Command Params"
+    },
+    {
+      "code": "const scrapeYt = require(\"scrape-yt\");\nscrapeYt.search(`${tempVars(\"para\")}`, {\n    type: \"video\"\n}).then(videos => {\n    console.log(videos[0]);\n\n  Actions.storeValue(videos[0].id, 1, \"url1\", cache);\n  Actions.storeValue(videos[0].title, 1, \"title\", cache);\n  Actions.storeValue(videos[0].thumbnail, 1, \"thumbnail\", cache);\n  Actions.storeValue(videos[0].viewCount, 1, \"views\", cache);\n});",
+      "behavior": "0",
+      "interpretation": "1",
+      "storage": "0",
+      "varName": "",
+      "VTypeSelect": "0",
+      "CVTypeValue": "",
+      "name": "Run Script"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "2",
+      "varName2": "channelid.music",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "2",
+      "varName": "channelid.music",
+      "name": "Save Variable"
+    },
+    {
+      "iftrue": "2",
+      "iftrueVal": "13",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "${tempVars(\"url1\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "1",
+      "name": "Play YouTube Video"
+    },
+    {
+      "call": "14",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "url": "${tempVars(\"url1\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "server": "0",
+      "info": "5",
+      "storage": "1",
+      "varName": "lengthofqueue",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "title": "",
+      "author": "Added To Queue",
+      "color": "BLUE",
+      "url": "",
+      "authorIcon": "https://cdn.discordapp.com/attachments/806662219689099284/863898961588256768/logo.gif",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"thumbnail\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Playing",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Playing",
+      "message": "[${tempVars(\"title\")}](https://youtube.com/watch?v=${tempVars(\"url1\")})",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Playing",
+      "fieldName": "Requested by",
+      "message": "${member}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Playing",
+      "fieldName": "Songs in queue",
+      "message": "${tempVars(\"lengthofqueue\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Playing",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "p"
+  ]
+}

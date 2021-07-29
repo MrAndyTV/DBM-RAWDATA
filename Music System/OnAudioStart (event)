@@ -1,0 +1,111 @@
+{
+  "name": "On Audio Start",
+  "temp": "vc",
+  "event-type": "On Audio Start",
+  "_id": "oAlhZ",
+  "actions": [
+    {
+      "info": "0",
+      "find": "${serverVars(\"channelid.music\")}",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "server": "0",
+      "info": "9",
+      "storage": "1",
+      "varName": "url",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "13",
+      "storage": "1",
+      "varName": "title",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "15",
+      "storage": "1",
+      "varName": "thumbnail",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "5",
+      "storage": "1",
+      "varName": "queue-length",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "server": "0",
+      "info": "11",
+      "storage": "1",
+      "varName": "requester",
+      "varName2": "",
+      "name": "Store Audio Info"
+    },
+    {
+      "title": "",
+      "author": "Now Playing",
+      "color": "BLUE",
+      "url": "",
+      "authorIcon": "https://images-ext-1.discordapp.net/external/b2YKldc9V1NZCiLoyiCSGANIvnEpamjBtB2tWXMk6tg/https/media.discordapp.net/attachments/806662219689099284/863898961588256768/logo.gif",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"thumbnail\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "[${tempVars(\"title\")}](${tempVars(\"url\")})",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Requested by",
+      "message": "${tempVars(\"requester\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Songs in queue",
+      "message": "${tempVars(\"queue-length\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
