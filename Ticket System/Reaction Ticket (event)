@@ -1,0 +1,181 @@
+{
+  "name": "Support - Create Ticket",
+  "temp": "Reaction-Clicked",
+  "event-type": "28",
+  "_id": "BdGaV",
+  "actions": [
+    {
+      "info": "0",
+      "find": "852213369071206420",
+      "storage": "1",
+      "varName": "support-role",
+      "name": "Find Role"
+    },
+    {
+      "reaction": "1",
+      "varName": "Reaction-Clicked",
+      "info": "7",
+      "storage": "1",
+      "varName2": "LastUser",
+      "name": "Store Reaction Info"
+    },
+    {
+      "member": "2",
+      "varName": "LastUser",
+      "info": "3",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "LastUser",
+      "info": "0",
+      "storage": "1",
+      "varName2": "bojcet",
+      "name": "Store Member Info"
+    },
+    {
+      "reaction": "1",
+      "varName": "Reaction-Clicked",
+      "info": "3",
+      "storage": "1",
+      "varName2": "emoji-name",
+      "name": "Store Reaction Info"
+    },
+    {
+      "member": "2",
+      "varName": "LastUser",
+      "info": "0",
+      "varName2": "",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If Member"
+    },
+    {
+      "storage": "1",
+      "varName": "emoji-name",
+      "comparison": "2",
+      "value": "✉",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "reaction": "1",
+      "varName": "Reaction-Clicked",
+      "member": "2",
+      "varName2": "LastUser",
+      "name": "Remove Reaction"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket.system1",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket.system1",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "tickets-made",
+      "name": "Store Server Data"
+    },
+    {
+      "channelName": "ticket- ${tempVars(\"tickets-made\")}",
+      "topic": "Ikke fjern \"ticket-\" fra kanal navnet.",
+      "position": "",
+      "storage": "1",
+      "varName": "channel",
+      "categoryID": "852117403747876874",
+      "reason": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "member": "2",
+      "varName2": "LastUser",
+      "permission": "VIEW_CHANNEL",
+      "state": "0",
+      "reason": "",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "member": "2",
+      "varName2": "LastUser",
+      "permission": "SEND_MESSAGES",
+      "state": "0",
+      "reason": "",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "member": "2",
+      "varName2": "LastUser",
+      "permission": "READ_MESSAGE_HISTORY",
+      "state": "0",
+      "reason": "",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "title": ":envelope: Exline Support",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/852215066996899890/852291942703300608/exline_roleplay.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Hey, **${tempVars(\"username\")}** our support team will help you out as soon as possible!\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Exline Roleplay\n",
+      "footerIcon": "https://cdn.discordapp.com/attachments/852215066996899890/852291942703300608/exline_roleplay.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "${tempVars(\"bojcet\")} ${tempVars(\"support-role\")} ",
+      "name": "Send Embed Message"
+    }
+  ],
+  "temp2": "Lastuser"
+}

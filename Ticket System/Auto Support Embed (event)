@@ -1,0 +1,78 @@
+{
+  "name": "Support - Embed",
+  "temp": "",
+  "event-type": "1",
+  "_id": "gizgu",
+  "actions": [
+    {
+      "info": "0",
+      "find": "852117426861899796",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "title": ":envelope: Exline Support",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/852215066996899890/852291942703300608/exline_roleplay.png",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Hey, do you need some help?\n\nPlease click on ✉ below if you have any issues or questions!\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Exline Roleplay",
+      "footerIcon": "https://cdn.discordapp.com/attachments/852215066996899890/852291942703300608/exline_roleplay.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "1",
+      "varName3": "Embed-Object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed-Object",
+      "emoji": "4",
+      "varName2": "✉",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "Embed-Object",
+      "info": "1",
+      "storage": "2",
+      "varName2": "Message-id",
+      "name": "Store Message Info"
+    }
+  ]
+}
