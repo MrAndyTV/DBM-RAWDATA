@@ -1,0 +1,53 @@
+{
+  "name": "shuffle",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "pREyR",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "name": "Shuffle Queue MOD"
+    },
+    {
+      "title": "",
+      "author": "Queue Shuffled",
+      "color": "BLUE",
+      "url": "",
+      "authorIcon": "https://media.discordapp.net/attachments/806662219689099284/863898961588256768/logo.gif",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${member} shuffled the music queue!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
